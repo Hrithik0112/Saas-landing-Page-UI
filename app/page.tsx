@@ -2,6 +2,7 @@ import { Banner } from "./_components/Banner";
 import { CTA } from "./_components/CTA";
 import { FAQs } from "./_components/FAQs";
 import { Features } from "./_components/Features";
+import { Footer } from "./_components/Footer";
 import { Hero } from "./_components/Hero";
 import { LogoTicker } from "./_components/LogoTicker";
 import { Navbar } from "./_components/Nvabar";
@@ -19,6 +20,7 @@ export default function Home() {
     <Product/>
     <FAQs/>
     <CTA/>
+    <Footer/>
     </>
   );
 }
