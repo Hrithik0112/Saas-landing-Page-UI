@@ -1,4 +1,5 @@
 import { Banner } from "./_components/Banner";
+import { FAQs } from "./_components/FAQs";
 import { Features } from "./_components/Features";
 import { Hero } from "./_components/Hero";
 import { LogoTicker } from "./_components/LogoTicker";
@@ -15,6 +16,7 @@ export default function Home() {
     <LogoTicker/>
     <Features/>
     <Product/>
+    <FAQs/>
     </>
   );
 }
