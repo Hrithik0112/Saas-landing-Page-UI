@@ -1,4 +1,5 @@
 import { Banner } from "./_components/Banner";
+import { CTA } from "./_components/CTA";
 import { FAQs } from "./_components/FAQs";
 import { Features } from "./_components/Features";
 import { Hero } from "./_components/Hero";
@@ -17,6 +18,7 @@ export default function Home() {
     <Features/>
     <Product/>
     <FAQs/>
+    <CTA/>
     </>
   );
 }
