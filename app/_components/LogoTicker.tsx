@@ -35,6 +35,25 @@ const Images = [
         src : pulseLogo,
         alt : "pulseLogo"
     },
+    {
+        src : celestialLogo,
+        alt : "celestialLogo"
+    },
+    
+    {
+        src : pulseLogo,
+        alt : "pulseLogo"
+    },
+    {
+        src : celestialLogo,
+        alt : "celestialLogo"
+    },
+    
+    {
+        src : pulseLogo,
+        alt : "pulseLogo"
+    },
+    
 
 ]
 
