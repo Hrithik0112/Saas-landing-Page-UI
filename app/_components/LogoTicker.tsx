@@ -59,7 +59,7 @@ const Images = [
 
 export const LogoTicker = ()=> {
     return <div className="bg-black text-white py-[72px] sm:py-24">
-        <div className="px-4 md:px-[88px]">
+        <div className="px-4">
         <h2 className="text-xl text-center text-white/70 ">Trusted by the world's most innovative teams</h2>
         <div className="overflow-hidden relative mt-9 before:content-[''] before:absolute before:h-full  before:w-5 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] after:content-[''] after:absolute after:h-full after:w-5 after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:right-0 before:left-0 after:top-0 before:top-0 ">
             <div className="flex gap-16">

@@ -1,7 +1,5 @@
-"use client";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
@@ -24,32 +22,8 @@ export const Hero = () => {
             <h1 className="text-7xl sm:text-9xl font-bold tracking-tighter text-center inline-flex">
               One Task <br /> at a Time
             </h1>
-            <motion.div
-            drag
-            dragSnapToOrigin 
-            className="absolute right-[476px] top-[108px] hidden sm:inline">
-              <Image
-                src={"/cursor.png"}
-                alt="cursor"
-                width={200}
-                height={200}
-                className="max-w-none"
-                draggable="false"
-              />
-            </motion.div>
-            <motion.div 
-            drag
-            dragSnapToOrigin
-            className="absolute left-[498px] top-[56px] hidden sm:inline">
-              <Image
-                src={"/message.png"}
-                alt="cursor"
-                width={200}
-                height={200}
-                className="max-w-none"
-                draggable="false"
-              />
-            </motion.div>
+            <Image src={"/cursor.png"} alt="cursor" width={200} height={200} className="absolute right-[476px] top-[108px] hidden sm:inline"/>
+            <Image src={"/message.png"} alt="cursor" width={200} height={200} className="absolute left-[498px] top-[56px] hidden sm:inline"/>
           </div>
         </div>
         <div className="flex justify-center">
