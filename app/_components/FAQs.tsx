@@ -1,7 +1,7 @@
-"use client"
-import clsx from "clsx";
+"use client";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const faqitems = [
   {
@@ -26,30 +26,39 @@ const faqitems = [
   },
 ];
 
-const AccordianItem = ({question , answer} : {question : string , answer : string})=> {
-
-    const [isOpen , setIsOpen] = useState(false)
-    return (
-        <div className="py-7 border-b border-white/30" onClick={()=> setIsOpen(!isOpen)}>
-              <div className="flex items-center ">
-                <span className="flex-1 text-lg font-bold">{question}</span>
-                {isOpen ? <Minus/> : <Plus/> }
-              </div>
-              <div className={clsx("mt-4 " , {hidden : !isOpen , 
-                "" : isOpen === true
-              })}>{answer}</div>
-            </div>
-    )
-}
+const AccordianItem = ({ question, answer }: { question: string; answer: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="py-7 border-b border-white/30" onClick={() => setIsOpen(!isOpen)}>
+      <div className="flex items-center ">
+        <span className="flex-1 text-lg font-bold">{question}</span>
+        {isOpen ? <Minus /> : <Plus />}
+      </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0, marginTop: 0 }}
+            animate={{ opacity: 1, height: "auto", marginTop: "16px" }}
+            exit={{ opacity: 0, height: 0, marginTop: 0 }}
+          >
+            {answer}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
 
 export const FAQs = () => {
   return (
     <div className="py-[72px] bg-black text-white sm:py-24 bg-gradient-to-b from-[#5D2CA8]  to-black">
       <div className="px-4">
-        <h2 className="text-center font-bold text-5xl sm:text-6xl sm:max-w-[648px] sm:mx-auto">Frequently asked questions</h2>
+        <h2 className="text-center font-bold text-5xl sm:text-6xl sm:max-w-[648px] sm:mx-auto">
+          Frequently asked questions
+        </h2>
         <div className="mt-12 max-w-[648px] mx-auto">
           {faqitems.map(({ question, answer }) => (
-            <AccordianItem question={question} answer={answer} key={question}/>
+            <AccordianItem question={question} answer={answer} key={question} />
           ))}
         </div>
       </div>
