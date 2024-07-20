@@ -49,7 +49,7 @@ export const FAQs = () => {
         <h2 className="text-center font-bold text-5xl sm:text-6xl sm:max-w-[648px] sm:mx-auto">Frequently asked questions</h2>
         <div className="mt-12 max-w-[648px] mx-auto">
           {faqitems.map(({ question, answer }) => (
-            <AccordianItem question={question} answer={answer}/>
+            <AccordianItem question={question} answer={answer} key={question}/>
           ))}
         </div>
       </div>

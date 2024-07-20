@@ -37,11 +37,11 @@ const Images = [
     },
     {
         src : celestialLogo,
-        alt : "celestialLogo"
+        alt : "celestialLogo1"
     },
     {
         src : echoLogo,
-        alt : "echoLogo"
+        alt : "echoLogo2"
     },
     
 ]
@@ -61,11 +61,11 @@ export const LogoTicker = ()=> {
             animate={{translateX : "-50%"}} 
             className="flex gap-16 flex-none pr-16">
 
-            {Images.map(({src , alt})=> (
-                <Image src={src} alt={alt} className="flex-none h-8 w-auto"/>
+            {Images.map(({src , alt })=> (
+                <Image src={src} alt={alt} key={alt} className="flex-none h-8 w-auto"/>
             ))}
             {Images.map(({src , alt})=> (
-                <Image src={src} alt={alt} className="flex-none h-8 w-auto"/>
+                <Image src={src} alt={alt} key={alt} className="flex-none h-8 w-auto"/>
             ))}
             </motion.div>
         </div>
