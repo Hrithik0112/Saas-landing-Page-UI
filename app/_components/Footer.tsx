@@ -1,8 +1,5 @@
-import Linkedin from "../../public/LinkedIN.svg";
-import Youtube from "../../public/youtube.svg";
-import TikTok from "../../public/tiktok.svg";
-import Twitter from "../../public/x-social.svg";
-import Image from "next/image";
+
+import { GitHubLogoIcon, LinkedInLogoIcon, NotionLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 
 export const Footer = () => {
   return (
@@ -10,19 +7,11 @@ export const Footer = () => {
     <div className="p-4 mx-auto" >
       <div className=" flex flex-col sm:flex-row sm:justify-between gap-4 ">
         <div className="text-center">© 2024 Hrithik, Inc. All rights reserved</div>
-        <ul className="flex gap-2.5 justify-center">
-          <li className="bg-white/60">
-            <Image src={Linkedin} alt=""  />
-          </li>
-          <li className="bg-white/60">
-            <Image src={Youtube} alt="" />
-          </li>
-          <li className="bg-white/60">
-            <Image src={TikTok} alt="" />
-          </li>
-          <li className="bg-white/60">
-            <Image src={Twitter} alt=""  />
-          </li>
+        <ul className="flex gap-4 justify-center">
+          <li><GitHubLogoIcon className="text-white/60 w-6 h-6 hover:text-white"/> </li>
+          <li><TwitterLogoIcon className="text-white/60 w-6 h-6 hover:text-white"/> </li>
+          <li><NotionLogoIcon className="text-white/60 w-6 h-6 hover:text-white"/> </li>
+          <li><LinkedInLogoIcon className="text-white/60 w-6 h-6 hover:text-white"/> </li>
         </ul>
       </div>
     </div>
