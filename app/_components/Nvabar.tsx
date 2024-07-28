@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Navbar = () => {
   return (
-    <div className="p-4 bg-black">
+    <div className="p-4 md:px-20 bg-black">
       <div className="py-4 flex justify-between items-center">
         <div className="relative">
           <div className="absolute h-full w-full top-0 bottom-0 bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] blur-md"></div>

@@ -19,7 +19,7 @@ const FeatureCards = [
 
 export const Features = ()=> {
     return <div className="bg-black text-white py-[72px] sm:py-24">
-        <div className="p-4">
+        <div className="p-4 md:px-20">
             <h2 className="font-bold text-5xl sm:text-6xl text-center tracking-tighter">Everything you need</h2>
             <div className="max-w-xl mx-auto">
 
